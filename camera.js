@@ -13,6 +13,7 @@ var make_camera = function(canvas, position, up, yaw, pitch) {
     var right = glMatrix.vec3.create();
     var world_up = up;
 
+    
     // Euler angles
     var yaw = 90.0;
     var pitch = 0.0;
