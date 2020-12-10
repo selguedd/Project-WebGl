@@ -72,11 +72,11 @@ var load_obj = async function(name = 'bunny_small.obj') {
           }
         }
       }
-      var vertexCount = vertices.length / 6;
+      var vertexCount = vertices.length / 8;
       console.log("Loaded mesh with " + vertexCount + " vertices");
       return {
         buffer: new Float32Array(vertices),
-        num_triangles: 2880
+        num_triangles: vertexCount
       };
     }
     
