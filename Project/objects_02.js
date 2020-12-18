@@ -36,7 +36,7 @@ var load_obj = async function(name = 'bunny_small.obj') {
     console.log("Loaded mesh with " + vertexCount + " vertices");
     return {
       buffer: new Float32Array(result),
-      num_triangles: vertexCount
+      num_triangles: (vertexCount)
     };
   }
   
@@ -92,6 +92,7 @@ var make_object = async function(gl, obj) {
     }
 
 }
+
 
 
 
