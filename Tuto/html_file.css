@@ -1,0 +1,10 @@
+#startButtonId {
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-weight:bold;
+    text-shadow:3px 10px 2px #93968f, -3px 6px 5px #58d1e3
+    }

@@ -6,9 +6,6 @@
 
 <body>
     <canvas id="webgl_canvas" style="background: url('../textures/univers.jpg')"></canvas>
-  
-
-
 
     <script src="../gl-matrix-min.js"></script>
     <script language="javascript" type="text/javascript" src="../camera.js"></script>
@@ -87,7 +84,7 @@
                                                     glMatrix.vec3.fromValues(0.0, 0.0, -4.0));
            
             plane_mesh.model = glMatrix.mat4.scale(plane_mesh.model,plane_mesh.model,
-                                                    glMatrix.vec3.fromValues(0.01, 0.01, 0.01))
+                                                    glMatrix.vec3.fromValues(0.1, 0.1, 0.1))
 
             cube_sal_mesh.model = glMatrix.mat4.translate(cube_sal_mesh.model,cube_sal_mesh.model,
                                                     glMatrix.vec3.fromValues(0.0, 0.0, 4.0));
