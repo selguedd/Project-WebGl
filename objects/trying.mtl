@@ -1,0 +1,691 @@
+# Blender MTL File: 'trying.blend'
+# Material Count: 64
+
+newmtl Material
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl default
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/aw2.jpg
+
+newmtl default_Area
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 0.156863 0.149020 0.176471
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/Form3_texture.jpg
+
+newmtl default_Area_city_base.2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 0.156863 0.149020 0.176471
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/Form3_texture.jpg
+
+newmtl default_Area_city_base.2_1
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 0.156863 0.149020 0.176471
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/Form3_texture.jpg
+
+newmtl default_Area_city_base.2_2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 0.156863 0.149020 0.176471
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/Form3_texture.jpg
+
+newmtl default_access
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/derf1_01_01_01.jpg
+
+newmtl default_access_city_base.2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/derf1_01_01_01.jpg
+
+newmtl default_access_city_base.2_1
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/derf1_01_01_01.jpg
+
+newmtl default_access_city_base.2_2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/derf1_01_01_01.jpg
+
+newmtl default_city_base
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/dr2b_01_01_01.jpg
+
+newmtl default_city_base.2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/aw2.jpg
+
+newmtl default_city_base.2_1
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/aw2.jpg
+
+newmtl default_city_base.2_2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/aw2.jpg
+
+newmtl default_city_base_city_base.2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/dr2b_01_01_01.jpg
+
+newmtl default_city_base_city_base.2_1
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/dr2b_01_01_01.jpg
+
+newmtl default_city_base_city_base.2_2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/dr2b_01_01_01.jpg
+
+newmtl default_city_bldgs.2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/axcv1.jpg
+
+newmtl default_floor
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/antenna_04_01_01_01.jpg
+
+newmtl default_floor_city_base.2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/antenna_04_01_01_01.jpg
+
+newmtl default_floor_city_base.2_1
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/antenna_04_01_01_01.jpg
+
+newmtl default_floor_city_base.2_2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/antenna_04_01_01_01.jpg
+
+newmtl default_glass
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 0.800000
+illum 9
+
+newmtl default_glass_city_base.2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 0.800000
+illum 9
+
+newmtl default_glass_city_base.2_1
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 0.800000
+illum 9
+
+newmtl default_glass_city_base.2_2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 0.800000
+illum 9
+
+newmtl default_holders
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_holders_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_lamp_poles
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_lamp_poles_city_base.2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_lamp_poles_city_base.2_1
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_lamp_poles_city_base.2_2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_lights
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_lights_city_base.2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_lights_city_base.2_1
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_lights_city_base.2_2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+
+newmtl default_sign10
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/b9.jpg
+
+newmtl default_sign10_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/a4.jpg
+
+newmtl default_sign2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/b10.jpg
+
+newmtl default_sign2_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/a5.jpg
+
+newmtl default_sign3
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/b15b.jpg
+
+newmtl default_sign3_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/a7.jpg
+
+newmtl default_sign4
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/v1.jpg
+
+newmtl default_sign4_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/a9.jpg
+
+newmtl default_sign5
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/v2.jpg
+
+newmtl default_sign5_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/b1.jpg
+
+newmtl default_sign6
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/d1.jpg
+
+newmtl default_sign6_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/b4.jpg
+
+newmtl default_sign7
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/g3.jpg
+
+newmtl default_sign7_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/b8.jpg
+
+newmtl default_sign8
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/g1.jpg
+
+newmtl default_sign8_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/b13.jpg
+
+newmtl default_sign9
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/g4.jpg
+
+newmtl default_sign9_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/b14.jpg
+
+newmtl default_sign_mult
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/b12.jpg
+
+newmtl default_sign_mult_1
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/a2.jpg
+
+newmtl default_tubes
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/sc1_01_01_01.jpg
+
+newmtl default_tubes_city_base.2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/sc1_01_01_01.jpg
+
+newmtl default_tubes_city_base.2_1
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/sc1_01_01_01.jpg
+
+newmtl default_tubes_city_base.2_2
+Ns 0.750002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/sc1_01_01_01.jpg
+
+newmtl default_water_canal
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/fl1.jpg
+
+newmtl default_water_canal_city_base.2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/fl1.jpg
+
+newmtl default_water_canal_city_base.2_1
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/fl1.jpg
+
+newmtl default_water_canal_city_base.2_2
+Ns 1.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 2
+map_Kd /Users/naimsassine/Downloads/t3qqxibgic-CenterCitySciFi/Center city Sci-Fi/Maps/fl1.jpg
