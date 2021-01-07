@@ -74,11 +74,11 @@ const main = function (resources) {
     lights = createLights(500);
     addLightsToGroup(lights, base);
     //scene.add(base);
-
     
-    var ship_material = new THREE.MeshBasicMaterial( { color: 0xFFFFFF } );
+    grayShade = 0.15 + Math.random() / 5;
+    var ship_material = getColoredShader(new THREE.Vector3(grayShade, grayShade, grayShade));
     var loader = new THREE.OBJLoader();
-    loader.load( 'Center_City_Sci-Fi.obj',
+    loader.load( 'nams_project.obj',
         function( obj ){
             obj.traverse( function( child ) {
                 if ( child instanceof THREE.Mesh ) {
@@ -94,7 +94,6 @@ const main = function (resources) {
             console.error( "Error loading 'ship.obj'")
         }
     );
-
 
     // camera controls
     camera.position.set(cameraDist, cameraHeight, cameraDist);
