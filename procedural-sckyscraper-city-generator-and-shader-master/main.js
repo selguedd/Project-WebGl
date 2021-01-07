@@ -73,7 +73,28 @@ const main = function (resources) {
     makeCity(map.cells);
     lights = createLights(500);
     addLightsToGroup(lights, base);
-    scene.add(base);
+    //scene.add(base);
+
+    
+    var ship_material = new THREE.MeshBasicMaterial( { color: 0xFFFFFF } );
+    var loader = new THREE.OBJLoader();
+    loader.load( 'Center_City_Sci-Fi.obj',
+        function( obj ){
+            obj.traverse( function( child ) {
+                if ( child instanceof THREE.Mesh ) {
+                    child.material = ship_material;
+                }
+            } );
+            scene.add( obj );
+        },
+        function( xhr ){
+            console.log( (xhr.loaded / xhr.total * 100) + "% loaded")
+        },
+        function( err ){
+            console.error( "Error loading 'ship.obj'")
+        }
+    );
+
 
     // camera controls
     camera.position.set(cameraDist, cameraHeight, cameraDist);
@@ -129,7 +150,7 @@ const main = function (resources) {
       fragmentShader: resources.frag_shader,
     });
   }
-
+  // returns a random int between min and max (inclusive)
   function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -137,6 +158,7 @@ const main = function (resources) {
   }
 
   // basically a step function
+  // creates a random value but replaces margins with fixed value
   function getRandWithLimits(low, high) {
     const rand = Math.random();
     if (rand < low) return low;
