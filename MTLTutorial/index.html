@@ -9,6 +9,11 @@
 <body>
 <!-- partial:index.partial.html -->
 <canvas id="canvas"></canvas>
+<div id="uiContainer">
+  <div id="ui">
+    <div id="cameraAngle"></div>
+  </div>
+</div>
 <!--
 for most samples webgl-utils only provides shader compiling/linking and
 canvas resizing because why clutter the examples with code that's the same in every sample.
@@ -18,6 +23,9 @@ for webgl-utils, m3, m4, and webgl-lessons-ui.
 -->
 <script src="https://webglfundamentals.org/webgl/resources/webgl-utils.js"></script>
 <script src="https://webglfundamentals.org/webgl/resources/m4.js"></script>
+<script src="https://webglfundamentals.org/webgl/resources/webgl-lessons-ui.js"></script>
+<script language="javascript" type="text/javascript" src="../camera.js"></script>
+<script src="../gl-matrix-min.js"></script>
 <!-- partial -->
   <script  src="./script.js"></script>
 
