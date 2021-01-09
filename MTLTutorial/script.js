@@ -1,7 +1,3 @@
-// WebGL - load obj - w/mtl, textures
-// from https://webglfundamentals.org/webgl/webgl-load-obj-w-mtl-w-textures.html
-
-
 "use strict";
 
 // This is not a full .obj parser.
@@ -238,7 +234,6 @@ function createTexture(gl, url) {
   const texture = create1PixelTexture(gl, [128, 192, 255, 255]);
   // Asynchronously load an image
   const image = new Image();
-  requestCORSIfNotSameOrigin(image, url)
   image.src = url;
   image.addEventListener('load', function() {
     // Now that the image has loaded make copy it to the texture.
@@ -287,10 +282,10 @@ async function main() {
   varying vec4 v_color;
 
   void main() {
-    vec4 worldPosition =  a_position;
+    vec4 worldPosition = u_world * a_position;
     gl_Position = u_projection * u_view * worldPosition;
     v_surfaceToView = u_viewWorldPosition - worldPosition.xyz;
-    v_normal = a_normal;
+    v_normal = mat3(u_world) * a_normal;
     v_texcoord = a_texcoord;
     v_color = a_color;
   }
@@ -340,7 +335,7 @@ async function main() {
   // compiles and links the shaders, looks up attribute and uniform locations
   const meshProgramInfo = webglUtils.createProgramInfo(gl, [vs, fs]);
 
-  const objHref = 'brux_map.obj';  
+  const objHref = 'Miami_2525.obj';  
   const response = await fetch(objHref);
   const text = await response.text();
   const obj = parseOBJ(text);
@@ -350,7 +345,6 @@ async function main() {
     const response = await fetch(matHref);
     return await response.text();
   }));
-
   const materials = parseMTL(matTexts.join('\n'));
 
   const textures = {
@@ -456,9 +450,9 @@ async function main() {
   // see the object.
   const radius = m4.length(range) * 1.2;
   const cameraPosition = m4.addVectors(cameraTarget, [
-    0,
-    0,
-    radius,
+    10,
+    10,
+    10,
   ]);
   // Set zNear and zFar to something hopefully appropriate
   // for the size of this object.
@@ -469,40 +463,6 @@ async function main() {
     return deg * Math.PI / 180;
   }
 
-  const settings = {
-    rotation: 150,  // in degrees
-    cam1FieldOfView: 60,  // in degrees
-    cam1PosX: 0,
-    cam1PosY: 0,
-    cam1PosZ: -200,
-  };
-  /**
-   *  webglLessonsUI.setupUI(document.querySelector('#ui'), settings, [
-    { type: 'slider',   key: 'rotation',     min: 0, max: 360, change: render, precision: 2, step: 0.001, },
-    { type: 'slider',   key: 'cam1FieldOfView',  min: 1, max: 170, change: render, precision: 2, step: 0.00001,},
-    { type: 'slider',   key: 'cam1PosX',     min: -1, max: 1, change: render, precision: 4, step: 0.00001,},
-    { type: 'slider',   key: 'cam1PosY',     min: -1, max: 1, change: render, precision: 4, step: 0.00001,},
-    { type: 'slider',   key: 'cam1PosZ',     min: -1, max: 1, change: render, precision: 4, step: 0.00001,},
-  ]); 
-
-    a put dans render
-    let u_x_world = m4.xRotation(settings.cam1PosX);
-    let u_y_world = m4.yRotation(settings.cam1PosY);
-    let intermediate = m4.multiply(u_x_world,u_y_world)
-    let u_z_world = m4.zRotation(settings.cam1PosZ);
-    let u_world = m4.multiply(intermediate,u_z_world)
-    u_world = m4.translate(u_world, ...objOffset);
-   */
-
-
-
-  var position_webgl = glMatrix.vec3.fromValues(0, 0, -4.0)
-  var up_webgl = glMatrix.vec3.fromValues(0.0, 1.0, 0.0)
-  var yaw_webgl = -90.0
-  var pitch_webgl = 0.0
-  var camera_webgl = make_camera(canvas, position_webgl, up_webgl, yaw_webgl, pitch_webgl)
-  var projection_webgl = camera_webgl.get_projection(45.0, gl.canvas.width / gl.canvas.height, 0.01, 100.0)
-
   function render(time) {
     time *= 0.001;  // convert to seconds
 
@@ -510,8 +470,7 @@ async function main() {
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
     gl.enable(gl.DEPTH_TEST);
 
-    // degToRad(60)
-    const fieldOfViewRadians = degToRad(settings.cam1FieldOfView);
+    const fieldOfViewRadians = degToRad(60);
     const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
     const projection = m4.perspective(fieldOfViewRadians, aspect, zNear, zFar);
 
@@ -524,8 +483,8 @@ async function main() {
 
     const sharedUniforms = {
       u_lightDirection: m4.normalize([-1, 3, 5]),
-      u_view: camera_webgl.get_view_matrix(),
-      u_projection: projection_webgl,
+      u_view: view,
+      u_projection: projection,
       u_viewWorldPosition: cameraPosition,
     };
 
@@ -534,8 +493,10 @@ async function main() {
     // calls gl.uniform
     webglUtils.setUniforms(meshProgramInfo, sharedUniforms);
 
-    camera_webgl.update(time)
-    let u_world = camera_webgl.get_view_matrix();
+    // compute the world matrix once since all parts
+    // are at the same space.
+    let u_world = m4.yRotation(time/4);
+    u_world = m4.translate(u_world, ...objOffset);
 
     for (const {bufferInfo, material} of parts) {
       // calls gl.bindBuffer, gl.enableVertexAttribArray, gl.vertexAttribPointer
@@ -554,15 +515,3 @@ async function main() {
 }
 
 main();
-
-
-// This is needed if the images are not on the same domain
-// NOTE: The server providing the images must give CORS permissions
-// in order to be able to use the image with WebGL. Most sites
-// do NOT give permission.
-// See: https://webglfundamentals.org/webgl/lessons/webgl-cors-permission.html
-function requestCORSIfNotSameOrigin(img, url) {
-  if ((new URL(url, window.location.href)).origin !== window.location.origin) {
-    img.crossOrigin = "";
-  }
-}

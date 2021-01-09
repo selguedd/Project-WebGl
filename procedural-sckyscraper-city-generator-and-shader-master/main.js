@@ -6,6 +6,8 @@ RESOURCES = [
   // ["name", "path-to-resource"]
   ["vert_shader", "shaders/default.vert"],
   ["frag_shader", "shaders/default.frag"],
+  ["vert_texture_shader", "shaders/texture.vert"],
+  ["frag_texture_shader", "shaders/texture.frag"],
   ["vertl_shader", "shaders/light.vert"],
   ["fragl_shader", "shaders/light.frag"]
 ];
@@ -28,19 +30,24 @@ const main = function (resources) {
   // Constants
   const near = 0.1;
   const far = 10000;
-  const repeatCount = 20;
+  const repeatCount = 40;
   const cellSize = 200;
-  const height = 1000;
+  var height = 100;
   const streetWidth = 20;
-  const groundColor = new THREE.Vector3(0, 0.5, 0);
-  const streetColor = new THREE.Vector3(0, 0, 0);
+  const groundColor = new THREE.Vector3(0, 1, 0);
+  const streetColor = new THREE.Vector3(0.160, 0.160, 0.160);
   const lightColor = new THREE.Vector3(0.5, 0.2, 1);
   const carColor = new THREE.Vector3(1, 0.3, 0);
   const carSpeed = 3;
   const carRadius = 8;
   const cameraDist = 2200;
   const cameraHeight = 1800;
-
+  const texture_city_building = (new THREE.TextureLoader()).load( "img/city_building.png" )
+  const texture_city_house = (new THREE.TextureLoader()).load( "img/city_house.png" )
+  const texture_car_light = (new THREE.TextureLoader()).load( "img/light.png" )
+  const texture_city_house_2 = (new THREE.TextureLoader()).load( "img/city_house_2.jpg" )
+  const texture_city_house_3 = (new THREE.TextureLoader()).load( "img/city_house_3.jpg" )
+  const texture_city_house_4 = (new THREE.TextureLoader()).load( "img/city_house_4.jpg" )
   // Three.js init
 
   const scene = new THREE.Scene();
@@ -73,27 +80,8 @@ const main = function (resources) {
     makeCity(map.cells);
     lights = createLights(500);
     addLightsToGroup(lights, base);
-    //scene.add(base);
-    
-    grayShade = 0.15 + Math.random() / 5;
-    var ship_material = getColoredShader(new THREE.Vector3(grayShade, grayShade, grayShade));
-    var loader = new THREE.OBJLoader();
-    loader.load( 'nams_project.obj',
-        function( obj ){
-            obj.traverse( function( child ) {
-                if ( child instanceof THREE.Mesh ) {
-                    child.material = ship_material;
-                }
-            } );
-            scene.add( obj );
-        },
-        function( xhr ){
-            console.log( (xhr.loaded / xhr.total * 100) + "% loaded")
-        },
-        function( err ){
-            console.error( "Error loading 'ship.obj'")
-        }
-    );
+    scene.add(base);
+
 
     // camera controls
     camera.position.set(cameraDist, cameraHeight, cameraDist);
@@ -117,7 +105,7 @@ const main = function (resources) {
 
   function addSkyBox() {
     const loader = new THREE.CubeTextureLoader();
-    loader.setPath('img/');
+    loader.setPath('img/cubemaps/');
 
     // for skybox
     const textureCube = loader.load([
@@ -129,6 +117,7 @@ const main = function (resources) {
     scene.background = textureCube;
     // scene.fog = new THREE.FogExp2(0xcccccc, 0.2);
   }
+
 
   // shader for everything besides the moving lights (cars)
   function getColoredShader(color) {
@@ -147,6 +136,32 @@ const main = function (resources) {
       },
       vertexShader: resources.vert_shader,
       fragmentShader: resources.frag_shader,
+    });
+  }
+
+  
+
+  // shader for everything besides the moving lights (cars)
+  function getTexturedShader(color, texture_image) {
+    return new THREE.ShaderMaterial({
+      uniforms: {
+        light_dir,
+        color: {
+          value: color
+        },
+        light_color: {
+          value: lightColor
+        },
+        camera_pos: {
+          value: camera.position
+        },
+        texture: {
+          type: "t",
+          value: texture_image
+        }
+      },
+      vertexShader: resources.vert_texture_shader,
+      fragmentShader: resources.frag_texture_shader,
     });
   }
   // returns a random int between min and max (inclusive)
@@ -259,10 +274,20 @@ const main = function (resources) {
     return shape;
   }
 
-  function createBlock(width, depth) {
-    const grayShade = 0.15 + Math.random() / 5;
+  function createBlock(width, depth, color1, color2, color3, texture_chosen) {
+    //const grayShade = 0.5 + Math.random() / 5;
     const geometry = new THREE.BoxGeometry(width, height * getRandWithLimits(0.2, 1), depth);
-    const material = getColoredShader(new THREE.Vector3(grayShade, grayShade, grayShade));
+    //const geometry = new THREE.CylinderGeometry(30, 30, height * getRandWithLimits(0.2, 1));
+    var uvPixel = 0.0;
+    geometry.faceVertexUvs[0][4][0]=new THREE.Vector2(uvPixel,uvPixel);
+    geometry.faceVertexUvs[0][4][1]=new THREE.Vector2(uvPixel,uvPixel);
+    geometry.faceVertexUvs[0][4][2]=new THREE.Vector2(uvPixel,uvPixel);
+    geometry.faceVertexUvs[0][5][0]=new THREE.Vector2(uvPixel,uvPixel);
+    geometry.faceVertexUvs[0][5][1]=new THREE.Vector2(uvPixel,uvPixel);
+    geometry.faceVertexUvs[0][5][2]=new THREE.Vector2(uvPixel,uvPixel);
+
+
+    const material = getTexturedShader(new THREE.Vector3(color1, color2, color3), texture_chosen);
     const block = new THREE.Mesh(geometry, material);
     return block;
   }
@@ -281,44 +306,120 @@ const main = function (resources) {
     const innerMargin = cellSize / 20;
     const margin = cellSize / 10;
     const innerSize = cellSize - 2 * margin - innerMargin;
+    var color1 = 0.5 + Math.random() / 5;
+    var color2 = color1;
+    var color3 = color1;
+    var texture_chosen = texture_city_house
 
     const {
       x,
       y
     } = divideSquareIntoRegions();
 
-    const dimX1 = innerSize * x;
-    const dimX2 = innerSize - dimX1;
+    if (cell.position['x'] < 4000 && cell.position['x'] > 2000 && cell.position['z'] > -4000 && cell.position['z'] < -2000){
+      height = 1000;
+      color1 = 0.1;
+      color2 = 0.3;
+      colro3 = 0.5;
+      texture_chosen = texture_city_building
 
-    const dimY1 = innerSize * y;
-    const dimY2 = innerSize - dimY1;
+      const dimX1 = innerSize * x;
+      const dimX2 = innerSize - dimX1;
+  
+      const dimY1 = innerSize * y;
+      const dimY2 = innerSize - dimY1;
+  
+      const block1 = createBlock(dimX1, dimY1, color1, color2, color3, texture_chosen);
+      const block4 = createBlock(dimX2, dimY2, color1, color2, color3, texture_chosen);
+  
+      block1.position.set(
+        margin + dimX1 / 2,
+        getHeight(block1) / 2,
+        -dimY1 / 2 - margin);
+  
+      block4.position.set(
+        innerMargin + margin + dimX1 + dimX2 / 2,
+        getHeight(block4) / 2,
+        -dimY1 - dimY2 / 2 - margin - innerMargin);
+  
+      cell.add(block1, block4);
+    } else {
+      height = 100
+      const dimX1 = innerSize * x;
+      const dimX2 = innerSize - dimX1;
+  
+      const dimY1 = innerSize * y;
+      const dimY2 = innerSize - dimY1;
 
-    const block1 = createBlock(dimX1, dimY1);
-    const block2 = createBlock(dimX2, dimY1);
-    const block3 = createBlock(dimX1, dimY2);
-    const block4 = createBlock(dimX2, dimY2);
+      var text_block_1 = texture_chosen;
+      var text_block_2 = texture_chosen;
+      var text_block_3 = texture_chosen;
+      var text_block_4 = texture_chosen;
 
-    block1.position.set(
-      margin + dimX1 / 2,
-      getHeight(block1) / 2,
-      -dimY1 / 2 - margin);
 
-    block2.position.set(
-      innerMargin + margin + dimX1 + dimX2 / 2,
-      getHeight(block2) / 2,
-      -dimY1 / 2 - margin);
+      const r_value = getRandomIntInclusive(1, 8)
 
-    block3.position.set(
-      margin + dimX1 / 2,
-      getHeight(block3) / 2,
-      -dimY1 - dimY2 / 2 - margin - innerMargin);
+      if (r_value == 1){
+        text_block_1 = texture_chosen;
+        text_block_2 = texture_city_house_2;
+        text_block_3 = texture_city_house_3;
+        text_block_4 = texture_city_house_4;
+      } else if (r_value == 2){
+        text_block_1 = texture_city_house_2;
+        text_block_2 = texture_city_house_3;
+        text_block_3 = texture_city_house_4;
+        text_block_4 = texture_city_house_4;
+      } else if(r_value == 3){
+        text_block_1 = texture_chosen;
+        text_block_2 = texture_chosen;
+        text_block_3 = texture_city_house_4;
+        text_block_4 = texture_city_house_4;
+      } else if (r_value == 4){
+        text_block_1 = texture_city_house_3;
+        text_block_2 = texture_city_house_2;
+        text_block_3 = texture_city_house_2;
+        text_block_4 = texture_city_house_4;
+      } else if (r_value == 5){
+        height = 200
+        text_block_1 = texture_city_house_4;
+        text_block_2 = texture_city_house_3;
+        text_block_3 = texture_city_house_3;
+        text_block_4 = texture_chosen;
+      } else if (r_value == 6){
+        text_block_1 = texture_city_house_3;
+        text_block_2 = texture_city_house_3;
+        text_block_3 = texture_city_house_3;
+        text_block_4 = texture_city_house_3;
+      } else if (r_value == 7){
+        text_block_1 = texture_chosen;
+        text_block_2 = texture_city_house_4;
+        text_block_3 = texture_city_house_4;
+        text_block_4 = texture_city_house_4;
+      } else {
+        text_block_1 = texture_chosen;
+        text_block_2 = texture_city_house_4;
+        text_block_3 = texture_chosen;
+        text_block_4 = texture_city_house_4;
+      }
 
-    block4.position.set(
-      innerMargin + margin + dimX1 + dimX2 / 2,
-      getHeight(block4) / 2,
-      -dimY1 - dimY2 / 2 - margin - innerMargin);
 
-    cell.add(block1, block2, block3, block4);
+      const block1 = createBlock(dimX1, dimY1, color1, color2, color3, text_block_1);
+      const block2 = createBlock(dimX2, dimY1, color1, color2, color3, text_block_2);
+      const block3 = createBlock(dimX1, dimY2, color1, color2, color3, text_block_3);
+      const block4 = createBlock(dimX2, dimY2, color1, color2, color3, text_block_4);
+  
+      block1.position.set(
+        margin + dimX1 / 2,
+        getHeight(block1) / 2,
+        -dimY1 / 2 - margin);
+  
+      block4.position.set(
+        innerMargin + margin + dimX1 + dimX2 / 2,
+        getHeight(block4) / 2,
+        -dimY1 - dimY2 / 2 - margin - innerMargin);
+  
+      cell.add(block1, block2, block3, block4);
+    }
 
   }
 
@@ -336,7 +437,7 @@ const main = function (resources) {
       uniforms: {
         texture: {
           type: "t",
-          value: (new THREE.TextureLoader()).load( "img/light.png" )
+          value: texture_car_light
         },
         center: {
           value: center
