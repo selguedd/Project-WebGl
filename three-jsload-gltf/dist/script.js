@@ -90,7 +90,7 @@ function main() {
 
   {
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load('untitled.glb', (gltf) => {
+    gltfLoader.load('glb_files/Sci_fi_city.glb', (gltf) => {
       const root = gltf.scene;
       scene.add(root);
 
